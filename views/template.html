@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .jumbotron {
+            padding: 20px;
+            margin: 0px;
+        }
+        
+        .no-padding {
+            padding: 0px;
+        }
+        
+        body * {
+            font-size: 10px !important;
+        }
+        
+        input,
+        select {
+            height: 25px!important;
+        }
+    </style>
+</head>
+http://www.ruralagriventures.com/wp-content/uploads/2017/05/man-team.jpg
+
+<body>
+    <div id="wrapper" class="container container-fluid" style="padding: 20px;">
+        <div class="jumbotron" style="background:#EEE" style="margin: 0px;">
+            <div class="row">
+                <div class="logo" style="margin-left: 20px;">
+                    <img src="http://www.grupoproductivo.com.ar/img/goo.jpg" style="width: 110px;max-height: 100px;">
+                </div>
+            </div>
+        </div>
+        <div class="" id="content">
+            <div class="col-xs-12">
+                <div class="row" style="padding: 15px;">
+                    <div class="col-xs-2" style="float:right;padding: 5px;height: 120px;width: 120px;border: 1px solid black;">
+                        <img src="{{options.img}}" alt="" style="height: 108px;width: 108px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 no-padding">
+                        <div class="col-xs-4">
+                            <div class="form-group form-horizontal">
+                                <label for="fusr">First Name <span style="color:red">*</span></label>
+                                <input readonly="true" type="text" class="form-control" value="{{options.fname}}">
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group form-horizontal">
+                                <label for="musr">Middle Name</label>
+                                <input readonly="true" type="text" class="form-control" value="{{options.mname}}">
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group form-horizontal">
+                                <label for="lusr">Last Name <span style="color:red">*</span></label>
+                                <input readonly="true" type="text" class="form-control" value="{{options.lname}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 no-padding">
+                        <div class="col-xs-4">
+                            <div class="form-group form-horizontal">
+                                <label for="dob">Date Of Birth <span style="color:red">*</span></label>
+                                <input readonly="true" type="text" class="form-control" value="01/01/1999">
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="sel1">Gender <span style="color:red">*</span></label>
+                                <select disabled="true" class="form-control">
+                                <option value="">-Select-</option>
+                                <option value="male" selected>Male</option>
+                                <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="sel1">Marital Status <span style="color:red">*</span></label>
+                                <select disabled="true" class="form-control">
+                                <option value="">-Select-</option>
+                                <option value="Married">Married</option>
+                                <option value="Not-Married" selected>Not-Married</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

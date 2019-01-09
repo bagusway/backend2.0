@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>Penarikan Tidak Berhasil</title>
+    <style>
+        /* .range {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        } */
+        
+        .latar-tabel {
+            width: 599px;
+            height: 527px;
+            mix-blend-mode: undefined;
+            background-color: #f5f5f5;
+            border: solid 1px #ebebeb;
+        }
+        
+        .kotak-dalam {
+            width: 471px;
+            height: 180px;
+            background-color: #ffffff !important;
+            margin-top: 25px;
+        }
+        
+        .logo {
+            width: 162px;
+            height: 39px;
+            margin-top: 42px;
+        }
+        
+        .judul-email {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #d24d57;
+            margin-top: 55px;
+            margin-bottom: 5px;
+        }
+        
+        .keterangan-email {
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        .keterangan-email-1 {
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        
+        .keterangan-email-2 {
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .paket {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-bottom: 0;
+        }
+        
+        .font-link {
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #ab47bc;
+            margin-top: 29px;
+        }
+        
+        .warna-button {
+            width: 216px;
+            height: 37px;
+            mix-blend-mode: undefined;
+            border-radius: 3px;
+            border: none;
+            background-color: #ab47bc;
+            margin-left: 120px;
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        #pageFooter {
+            margin-top: 83px;
+        }
+        
+        .font-footer {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+        }
+        
+        .margin-tabel {
+            padding: 5px;
+        }
+        
+        .tabel-dalam {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="table">
+            <div class="latar-tabel">
+                <div class="tabel-dalam">
+                    <tr>
+                        <img src={{img}} class="logo">
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="judul-email">Penarikan Tidak Berhasil !</div>
+                            <div class="keterangan-email-1">Anda tidak berhasil melakukan transaksi penarikan<br> uang pada :</div>
+                            <div class="keterangan-email"><b>{{date}}</b></div>
+                            <div class="keterangan-email-2">dengan nominal :</div>
+                            <div class="keterangan-email"><b>Rp {{total}}</b></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-link">
+                                <button class="font-link" href="#">Mengapa transaksi saya tidak berhasil ?</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <div id="pageFooter">
+                        <div class="font-footer">
+                            2018. PT Travinesia Muda Berkarya
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

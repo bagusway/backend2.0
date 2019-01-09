@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>Today is Trip Day!</title>
+    <style>
+        /* .range {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        } */
+        
+        .latar-tabel {
+            width: 599px;
+            height: 607px;
+            mix-blend-mode: undefined;
+            background-color: #f5f5f5;
+            border: solid 1px #ebebeb;
+        }
+        
+        .kotak-dalam {
+            width: 471px;
+            height: 255px;
+            background-color: #ffffff !important;
+            margin-top: 25px;
+        }
+        
+        .logo {
+            width: 162px;
+            height: 39px;
+            margin-top: 42px;
+        }
+        
+        .judul-email {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #373737;
+            margin-top: 25px;
+        }
+        
+        .keterangan-email {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-top: 0;
+        }
+        
+        .paket {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-bottom: 0;
+        }
+        
+        .nama-paket {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #ab47bc;
+            margin-left: 15px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .keterangan-paket {
+            font-size: 15px;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-left: 15px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        .warna-button {
+            width: 225px;
+            height: 37px;
+            mix-blend-mode: undefined;
+            border-radius: 3px;
+            border: none;
+            background-color: #ab47bc;
+            margin-left: 120px;
+            margin-top: 35px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        #pageFooter {
+            margin-top: 78px;
+        }
+        
+        .font-footer {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+        }
+        
+        .margin-tabel {
+            padding: 5px;
+        }
+        
+        .tabel-dalam {
+            margin-left: 60px;
+        }
+        
+        .kotak-paket-private {
+            margin-top: 18px;
+            margin-left: 15px;
+            width: 103px;
+            height: 27px;
+            border-radius: 13.5px;
+            background-color: #ff9800;
+            font-size: 13.5px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            line-height: 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .kotak-paket-open {
+            margin-top: 18px;
+            margin-left: 15px;
+            width: 103px;
+            height: 27px;
+            border-radius: 13.5px;
+            background-color: #536dfe;
+            font-size: 13.5px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            line-height: 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="table">
+            <div class="latar-tabel">
+                <div class="tabel-dalam">
+                    <tr>
+                        <img src={{img}} class="logo">
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="judul-email">Today is Trip Day !</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="keterangan-email">Pastikan Semua Perlengkapan Agen Travel Kamu Tidak Ada yang<br>Terlewat. Siap Memberikan Pengalaman yang Tak Terlupakan?
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="kotak-dalam">
+                                <div class="margin-tabel">
+                                    {{#if booking.id_type_trip}}
+                                        <div class="kotak-paket-open">Open Trip</div>
+                                    {{else}}
+                                         <div class="kotak-paket-private">Private Trip</div>
+                                    {{/if}}
+                                    <div class="nama-paket ">{{booking.id_trip.trip_name}}</div>
+                                    <div class="keterangan-paket ">Tanggal Berangkat : <b>{{date}}</b></div>
+                                    <div class="keterangan-paket ">Meeting Point : <b>{{booking.id_trip.meeting_point}}</b></div>
+                                    <div class="keterangan-paket ">Pukul : <b>{{booking.id_trip.time}} {{booking.id_trip.zone_time}}</b></div>
+                                    <button class="btn btn-default warna-button "><a  href="https://travinesia.com/Provider/DaftarPemesanan/{{booking.id_trip}}" ></a>Lihat Transaksi Penjualan</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <div id="pageFooter">
+                        <div class="font-footer">
+                            2018. PT Travinesia Muda Berkarya
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

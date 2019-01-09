@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>E Ticket</title>
+    <style>
+        .judul {
+            font-size: 32.9px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 0.29;
+            letter-spacing: normal;
+            text-align: left;
+            color: #1e2834 !important;
+        }
+        
+        .sub-judul {
+            font-size: 8.8px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.09;
+            letter-spacing: normal;
+            color: #d24d57 !important;
+            margin-top: 6px;
+        }
+        
+        .id_pemesanan {
+            font-size: 8.8px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.09;
+            letter-spacing: normal;
+            color: #4a4a4a !important;
+            margin-top: 5px;
+            margin-left: 17px;
+        }
+        
+        .paket {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 0.87;
+            letter-spacing: normal;
+            color: #4a4a4a !important;
+            margin-bottom: 6px;
+        }
+        
+        .judul-paket {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.21;
+            letter-spacing: normal;
+            color: #ab47bc !important;
+            margin-top: 0;
+        }
+        
+        .keterangan {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 0.87;
+            letter-spacing: normal;
+            color: #4a4a4a !important;
+            margin-bottom: 4px;
+        }
+        
+        .isi-keterangan {
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 0.87;
+            letter-spacing: normal;
+            color: #4a4a4a !important;
+            margin-bottom: 20px;
+        }
+        
+        .judul-tabel {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 0.87;
+            letter-spacing: normal;
+            color: #4a4a4a !important;
+        }
+        
+        .tabel {
+            padding: 0;
+        }
+        
+        .tabel1 {
+            padding-right: 0;
+        }
+        
+        .traveller {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.59;
+            letter-spacing: normal;
+            color: #ab47bc !important;
+        }
+        
+        .data-traveller {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.59;
+            letter-spacing: normal;
+            color: #4a4a4a !important;
+            margin-bottom: 0px;
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ab47bc !important;
+            text-align: left;
+        }
+        
+        .logo {
+            width: 110px;
+            height: 39px;
+            margin-top: 10px;
+        }
+        
+        .isi_footer {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #ffffff !important;
+        }
+        
+        .isi_footer_atas {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #ffffff !important;
+            margin-bottom: 0;
+        }
+        
+        #pagefooter {
+            position: fixed !important;
+            bottom: 0;
+            width: 100%;
+            height: 81px;
+            background-color: #ab47bc !important;
+            color: #ffffff !important;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7">
+                <h1 class="judul">E Ticket</h1>
+            </div>
+            <div class="col-xs-5">
+                <img src={{img}} class="logo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <p class="sub-judul">
+                    (Harap Ditunjukkan Kepada Agen Travel Saat di Meeting Point)
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <p class="id_pemesanan">
+                    ID Pesanan : {{booking.no_booking}}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-7">
+                <h4 class="paket">Paket Trip</h4>
+                <h3 class="judul-paket">{{booking.id_trip.trip_name}}</h3>
+            </div>
+            <div class="col-xs-5"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-6">
+                <p class="keterangan">Tanggal Keberangkatan</p>
+                <p class="isi-keterangan">{{booking_date}}</p>
+            </div>
+            <div class="col-xs-6">
+                <p class="keterangan">Tipe & Durasi Trip</p>
+                <P class="isi-keterangan">{{booking.id_type_trip.type_trip}} ({{booking.id_trip.days}} Hari {{booking.id_trip.night}} Malam)</P>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <p class="keterangan">Meeting Point(Jam)</p>
+                <p class="isi-keterangan">{{booking.id_trip.meeting_point}} (Pukul {{booking.id_trip.time} {{booking.id_trip.zone_time})</p>
+            </div>
+            <div class="col-xs-6">
+                <p class="keterangan">Jumlah Peserta (yang Dipesan)</p>
+                <P class="isi-keterangan">{{booking.quantity}}</P>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <p class="keterangan">Agen Travel</p>
+                <p class="isi-keterangan">{{booking.id_provider.travel_name}}</p>
+            </div>
+            <div class="col-xs-6">
+                <p class="keterangan">No. Handphone Agen Travel</p>
+                <P class="isi-keterangan">{{booking.id_provider.office_phone_number}}</P>
+            </div>
+        </div>
+        <br>
+        <div class="row ">
+            <table class="table table-hover">
+                <thead>
+                    <th>Peserta</th>
+                    <th>Usia</th>
+                    <th>No. Identitas</th>
+                </thead>
+
+                <tbody>
+                    {{{out}}}
+                </tbody>
+
+            </table>
+        </div>
+        <div id="pageFooter">
+            <p class="isi_footer_atas">PT Travinesia Muda Berkarya</p>
+            <p class="isi_footer">2018</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

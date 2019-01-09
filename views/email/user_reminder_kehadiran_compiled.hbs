@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>Email Diskusi</title>
+    <style>
+        /* .range {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        } */
+        
+        .latar-tabel {
+            width: 599px;
+            height: 527px;
+            mix-blend-mode: undefined;
+            background-color: #f5f5f5;
+            border: solid 1px #dddddd;
+        }
+        
+        .kotak-dalam {
+            width: 471px;
+            height: 180px;
+            background-color: #ffffff !important;
+            margin-top: 25px;
+        }
+        
+        .logo {
+            width: 162px;
+            height: 39px;
+            margin-top: 42px;
+        }
+        
+        .judul-email {
+            margin-top: 55px;
+            font-size: 30px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #373737;
+        }
+        
+        .keterangan-email {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            color: #4a4a4a;
+            margin-top: 18px;
+        }
+        
+        .keterangan-email-1 {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            color: #4a4a4a;
+            margin-top: 18px;
+        }
+        
+        .paket {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-bottom: 0;
+        }
+        
+        .nama-paket {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #ab47bc;
+            margin-left: 15px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        .keterangan-paket {
+            font-size: 15px;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+            margin-left: 15px;
+            margin-top: 0;
+        }
+        
+        .warna-button {
+            width: 183px;
+            height: 36px;
+            mix-blend-mode: undefined;
+            border-radius: 3px;
+            background-color: #9c27b0;
+            margin-left: 0px;
+            margin-top: 29px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        #pageFooter {
+            margin-top: 120px;
+        }
+        
+        .font-footer {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #4a4a4a;
+        }
+        
+        .margin-tabel {
+            padding: 5px;
+        }
+        
+        .tabel-dalam {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="table">
+            <div class="latar-tabel">
+                <div class="tabel-dalam">
+                    <tr>
+                        <img src={{img}} class="logo">
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="judul-email">Trip di depan mata, {{booking.order_name}} !</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="keterangan-email">Dua hari lagi adalah hari Trip Anda ke {{booking.id_trip.trip_name}},<br> bersama Agen Travel {{booking.id_provider.travel_name}}. Meeting Point di Stasiun Malang<br> pukul {{booking.id_trip.time}} {{booking.id_trip.zone_time}}.</div>
+
+                            <div class="keterangan-email-1">Jangan lupa konfirmasi kehadiran saat sudah berada di Meeting Point<br> dan membawa E Tiket. Masih ada pertanyaan terkait trip yang akan<br> anda ikuti? Langsung kirim pesan pribadi kepada Agen Travel Anda.</div>
+                        </td>
+                    </tr>
+                    <div id="pageFooter">
+                        <div class="font-footer">
+                            2018. PT Travinesia Muda Berkarya
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
